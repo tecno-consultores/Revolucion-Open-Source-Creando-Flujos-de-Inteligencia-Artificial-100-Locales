@@ -1,0 +1,25 @@
+* commit 9b45d4cb9dde8d65144d9f63559038d7955e7aff (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon May 25 19:50:30 2026 -0400
+| 
+|     * readme
+| 
+* commit 5c9d9ed5ec631c4cf335aadd778dc0a153936863
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon May 25 10:14:02 2026 -0400
+| 
+|     Create AUTHOR
+| 
+* commit 512aeb56a925f348407e935e503b4dacbb09101e
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon May 25 10:13:25 2026 -0400
+| 
+|     Update README with presentation details
+|     
+|     Added a description of the presentation on local AI solutions.
+| 
+* commit 1aad69ab75211c180fc13ac01660f3f55f9d08f5
+  Author: Sinfallas <sinfallas@yahoo.com>
+  Date:   Mon May 25 10:12:16 2026 -0400
+  
+      Initial commit
