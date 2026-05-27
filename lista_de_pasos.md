@@ -49,3 +49,56 @@ ollama pull nomic-embed-text-v2-moe
 ```bash
 ollama run qwen3.5:9b
 ```
+
+* Para personalizar nuestra imagen creamos el siguiente archivo:
+
+```bash
+nano Modelfile
+```
+
+* Y colocamos lo siguiente:
+
+```bash
+FROM qwen3.5:9b
+
+PARAMETER num_gpu 32
+PARAMETER num_thread 1
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.6
+PARAMETER top_p 0.5
+PARAMETER top_k 50
+```
+
+* Para finalizar la creación ejecutamos el siguiente comando para luego ejecutarlo
+
+```bash
+ollama create prueba -f Modelfile
+```
+
+```bash
+ollama run prueba
+```
+
+* Ahora ejecutemos N8N, OpenWebUI, Qdrant y Searxng:
+
+```bash
+docker compose -f docker-compose.yml --env-file env.example --profile n8n --profile n8n-worker --profile n8n-runner --profile openwebui --profile qdrant --profile searxng up -d
+```
+
+* Para iniciar el contenedor hermes
+
+```bash
+docker compose -f docker-compose.yml --env-file env.example --profile hermes up -d
+```
+
+* Para ejecutar la configuración inicial:
+
+```bash
+docker exec -it hermes hermes setup
+```
+
+* Finalmente para hablar con hermes:
+
+```bash
+docker exec -it hermes hermes
+```
